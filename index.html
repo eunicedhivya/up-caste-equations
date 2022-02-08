@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP Caste Equations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/upcasteeq.css">
+</head>
+<body>
+    <div class="UPCasteEq_wrapper">
+        <div class="UPCasteEq_model_blackout"></div>
+        <div class="UPCasteEq_model">
+            <div class="UPCasteEq_model_inner">
+                <button id="closeModel">X</button>
+                <div class="UPCasteEq_model_content">
+                    Model content was goes here.
+                </div>
+            </div>
+        </div>
+        <h1 class="UPCasteEq_headline" >UP 2022: The Number Game</h1>
+        <p class="UPCasteEq_desc">This widget lets you play pollster, putting into your hands the tools you’ll need to select caste and party combos to predict who will win UP in 2022, and also see how your choice stacks up against what our psephologist forecasts.</p>
+        <div class="row levl1">
+            <div class="col">
+                <!-- <span>Choose Phase</span> -->
+                <select name="" class="upcaste_dropdown" id="phase">
+                    <option>Select Phase</option>
+                    <option value="Phase-1">Phase 1</option>
+                    <option value="Phase-2">Phase 2</option>
+                    <option value="Phase-3">Phase 3</option>
+                    <option value="Phase-4">Phase 4</option>
+                    <option value="Phase-5">Phase 5</option>
+                    <option value="Phase-6">Phase 6</option>
+                    <option value="Phase-7">Phase 7</option>
+                </select>
+            </div>
+            <div class="col">
+                <!-- <span>Choose Phase</span> -->
+                <select name="" class="upcaste_dropdown" id="constituency">
+                    <option>Select constituency</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <p class="UPCasteEq_desc">This section lets you pick odds as calculated by our expert. To see whom the numbers favour, pick a party and select caste, category from the drop-down boxes.</p>
+        </div>
+        <div class="row levl2">
+            <div class="dominantcastetext col">
+                <p>Dominant communities in the constituency</p>
+                <ul id="caste_list">
+
+                </ul>
+            </div>
+            <div class="filters col">
+                <!-- <span>choose party</span> -->
+                <select name="" class="upcaste_dropdown" id="candParty">
+                    <option>Select party</option>
+                </select>
+                <!-- <span>choose caste</span> -->
+                <select name="" class="upcaste_dropdown" id="candCaste">
+                    <option>Select caste</option>
+                </select>
+                <!-- <span>choose category</span> -->
+                <select name="" class="upcaste_dropdown" id="candCategory">
+                    <option>Select category</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <p class="UPCasteEq_desc">Now, use the slider to predict the chances of your candidate winning the constituency. Hit “submit” to see how your pick stacks up against the expert’s choice.</p>
+        </div>
+        <div class="UPCasteEq_range">
+            <span>0</span>
+            <input type="range" name="range" id="probable_range" min="0" max="100" value="0" />
+            <span>100</span>
+        </div>
+        <div class="UPCasteEq_buttons">
+            <button id="submit">Submit</button>
+            <button id="reset">Reset</button>
+        </div>
+
+    </div>
+    <script src="assets/rawdata.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
