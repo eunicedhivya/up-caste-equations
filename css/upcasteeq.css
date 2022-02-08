@@ -1,0 +1,139 @@
+.UPCasteEq_wrapper {
+  width: 100%;
+  max-width: 300px;
+  margin: 50px auto;
+  text-align: center;
+  /* margin-top: 100px; */
+}
+.UPCasteEq_wrapper select,
+.UPCasteEq_wrapper input {
+  width: 100%;
+  height: 29px;
+}
+.UPCasteEq_wrapper .row {
+  margin-bottom: 10px;
+}
+
+.UPCasteEq_headline {
+  font-family: "Georama", sans-serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+  line-height: 26px;
+}
+.UPCasteEq_desc {
+  font-family: "Georama", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 15px;
+}
+.UPCasteEq_desc2 {
+  font-family: "Georama", sans-serif;
+  font-size: 15px;
+  line-height: 19px;
+  margin-bottom: 15px;
+}
+.UPCasteEq_desc2 span {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  width: 60px;
+}
+
+.upcaste_dropdown {
+  position: relative;
+}
+
+.levl1 {
+  display: flex;
+  column-gap: 10px;
+  /* margin-bottom: 15px; */
+}
+.levl1 .col:first-child {
+  width: 40%;
+}
+.levl1 .col:last-child {
+  width: 60%;
+}
+
+.levl2 {
+  display: flex;
+  column-gap: 10px;
+}
+
+.levl2 .col:first-child {
+  width: 50%;
+}
+.levl2 .col:last-child {
+  width: 50%;
+}
+.levl2 .filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.UPCasteEq_range {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+}
+.UPCasteEq_range span {
+  line-height: 29px;
+  display: inline-block;
+}
+
+.dominantcastetext {
+  background-color: #ebebeb;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
+  border-radius: 16px;
+  padding: 10px 15px;
+  min-height: 155px;
+}
+.dominantcastetext p {
+  color: #a05252;
+  margin-bottom: 10px;
+}
+.dominantcastetext li {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.UPCasteEq_buttons button {
+  font-family: "Georama", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.UPCasteEq_model {
+  position: absolute;
+  background-color: #ebebeb;
+  border-radius: 16px;
+  z-index: 1000;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -100px;
+}
+
+.UPCasteEq_model_blackout {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  z-index: 999;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -100px;
+  width: 100%;
+  height: 100%;
+}
+
+/* background-color: rgba(0, 0, 0, 0.6); */
