@@ -66,8 +66,8 @@ function showResult(userResult, modelResult, constituency, caste, party){
     result.style.display = "block";
     methodology.style.display = "none";
     document.getElementById("chosenConst").innerHTML = constituency;
-    document.getElementById("chosenParty").innerHTML = caste;
-    document.getElementById("chosenCaste").innerHTML = party;
+    document.getElementById("chosenParty").innerHTML = party;
+    document.getElementById("chosenCaste").innerHTML = caste;
     document.getElementById("userPrediction").innerHTML = userResult+"%";
     document.getElementById("modelPrediction").innerHTML = modelResult+"%";
 }
