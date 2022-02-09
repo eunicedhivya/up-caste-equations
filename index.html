@@ -47,13 +47,13 @@
                 </div>
             </div>
         </div>
-        <h1 class="UPCasteEq_headline" >UP 2022: The Number Game</h1>
+        <h1 class="UPCasteEq_headline" >UP 2022: The <span>Numbers</span> Game</h1>
         <p class="UPCasteEq_desc">This widget lets you play pollster, putting into your hands the tools you’ll need to select caste and party combos to predict who will win UP in 2022, and also see how your choice stacks up against what our psephologist forecasts.</p>
         <div class="row levl1">
             <div class="col">
                 <!-- <span>Choose Phase</span> -->
                 <select name="" class="upcaste_dropdown" id="phase">
-                    <option value="Select phase">Select Phase</option>
+                    <option value="Select phase">Select phase</option>
                     <option value="Phase-1">Phase 1</option>
                     <option value="Phase-2">Phase 2</option>
                     <option value="Phase-3">Phase 3</option>
@@ -100,10 +100,15 @@
         <div class="row">
             <p class="UPCasteEq_desc">Now, use the slider to predict the chances of your candidate winning the constituency. Hit “submit” to see how your pick stacks up against the expert’s choice.</p>
         </div>
-        <div class="UPCasteEq_range">
-            <span>0</span>
-            <input type="range" name="range" id="probable_range" min="0" max="100" value="0" />
-            <span>100</span>
+        <div class="slider">
+            <div class="sliderValue">
+                <span id="range_value">0</span>
+            </div>
+            <div class="UPCasteEq_range">
+                <span>0</span>
+                <input type="range" name="range" id="probable_range" min="0" max="100" value="0" />
+                <span>100%</span>
+            </div>
         </div>
         <div class="UPCasteEq_buttons">
             <button id="submit">Submit</button>
@@ -114,5 +119,18 @@
     </div>
     <script src="assets/rawdata.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        const slideValue = document.querySelector("#range_value");
+        const inputSlider = document.querySelector("#probable_range");
+        inputSlider.oninput = (() => {
+            let value = inputSlider.value;
+            slideValue.textContent = value + "%";
+            slideValue.style.left = (value / 2) + "%";
+            slideValue.classList.add("show");
+        });
+        inputSlider.onblur = (() => {
+            slideValue.classList.remove("show");
+        });
+    </script>
 </body>
 </html>
