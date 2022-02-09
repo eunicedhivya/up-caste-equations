@@ -260,6 +260,10 @@
   color: #000;
 }
 
+#range_value {
+  font-weight: bold;
+}
+
 @media (min-width: 1024px) {
   .UPCasteEq_wrapper {
     width: 100%;
