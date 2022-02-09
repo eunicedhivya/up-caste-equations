@@ -152,4 +152,14 @@
   margin-bottom: 15px;
 }
 
+.dom-voters-text {
+  font-family: "Georama", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 10px;
+  padding-top: 5px;
+  border-top: 1px solid #ccc;
+  display: block;
+}
+
 /* background-color: rgba(0, 0, 0, 0.6); */
