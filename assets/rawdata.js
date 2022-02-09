@@ -2,4 +2,4 @@ var rawData = [{"date":"10 Feb 2022","phase":"Phase-1","constituency":"Agra Cant
 
 var partyList = ["BSP","BJP","SP","INC","IND","RLD","IEMC","NCP","PP","QED","AD","SBSP","IND","INC","AD(S)","NISHAD"]
 
-var cand_category = ["General", "SC", "Other"]
+var cand_category = ["General", "SC"]
