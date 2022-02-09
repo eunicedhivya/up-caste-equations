@@ -20,7 +20,7 @@
             <div class="UPCasteEq_model_inner">
                 <button id="closeModel">X</button>
                 <div class="UPCasteEq_model_content">
-                    <div class="methodology">
+                    <div id="methodology" style="display: none;">
                         <h2>Methodology</h2>
                         <p>Eight filters have been used to calculate the winning probability of the candidate based on the combination of factors
                         that a user selects.</p>
@@ -29,6 +29,19 @@
                         value based on the previous election results and voter preferences in the respective category. Further, the consolidated
                         result of all these parameters is the outcome i.e. “winning probability” of the candidate under chosen conditions.</p>
                         <p>These results do not claim the absolute victory but the possibility of victory based on selected parameters.</p>
+                    </div>
+                    <div id="result" style="display: none;">
+                        <p>Selected parameters</p>
+                        <div class="result_header">
+                            <div><b>constituency</b> <span id="chosenConst"></span></div>
+                            <div><b>party</b> <span id="chosenParty"></span></div>
+                            <div><b>Caste</b> <span id="chosenCaste"></span></div>
+                        </div>
+                        <div class="result_body">
+                            <div><b>Your Prediction</b> <span id="userPrediction"></span></div>
+                            <div><b>Result based on our model</b> <span id="modelPrediction"></span></div>
+                        </div>
+                        <button id="closeModel2">close</button>
                     </div>
                 </div>
             </div>
@@ -63,7 +76,9 @@
             <div class="dominantcastetext col">
                 <p>Dominant communities in the constituency</p>
                 <ul id="caste_list">
-
+                    <li>-</li>
+                    <li>-</li>
+                    <li>-</li>
                 </ul>
             </div>
             <div class="filters col">
@@ -75,7 +90,7 @@
                 <select name="" class="upcaste_dropdown" id="candCaste">
                     <option>Select caste</option>
                 </select>
-                <span class="dom-voters-text">Dominant voters in constituency</span>
+                <span class="dom-voters-text">Dominant voters in the constituency</span>
                 <select name="" class="upcaste_dropdown" id="candCategory">
                     <option>Select category</option>
                 </select>
@@ -93,6 +108,7 @@
             <button id="submit">Submit</button>
             <button id="reset">Reset</button>
         </div>
+        <button id="method">Methodology</button>
 
     </div>
     <script src="assets/rawdata.js"></script>

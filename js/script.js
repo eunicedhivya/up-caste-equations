@@ -1,3 +1,8 @@
+var blackOut = document.getElementsByClassName("UPCasteEq_model_blackout")[0];
+var modelBox = document.getElementsByClassName("UPCasteEq_model")[0];
+var result = document.getElementById("result");
+var methodology = document.getElementById("methodology");
+
 document.getElementById("phase").addEventListener("change", function(){
     var phaseno = this.value;
     var fdData = rawData.filter(function(obj){
@@ -49,8 +54,41 @@ document.getElementById("submit").addEventListener("click", function(){
    var tempCategory = document.getElementById("candCategory").value;
    var tempRange = document.getElementById("probable_range").value;
    console.log(tempPhase, tempConst, tempCaste, tempParty, tempCategory, tempRange);
+   blackOut.style.display = "block";
+   modelBox.style.display = "block";
    getProbability(tempConst, tempCaste, tempParty, tempCategory);
-    // "Select caste" "Select party" "Select category"
+   showResult(tempRange, getProbability(tempConst, tempCaste, tempParty, tempCategory), tempConst, tempCaste, tempParty,);
+})
+
+function showResult(userResult, modelResult, constituency, caste, party){
+    blackOut.style.display = "block";
+    modelBox.style.display = "block";
+    result.style.display = "block";
+    methodology.style.display = "none";
+    document.getElementById("chosenConst").innerHTML = constituency;
+    document.getElementById("chosenParty").innerHTML = caste;
+    document.getElementById("chosenCaste").innerHTML = party;
+    document.getElementById("userPrediction").innerHTML = userResult;
+    document.getElementById("modelPrediction").innerHTML = modelResult;
+}
+
+document.getElementById("closeModel").addEventListener("click", function(){
+    blackOut.style.display = "none";
+    modelBox.style.display = "none";
+    result.style.display = "none";
+    methodology.style.display = "none";
+})
+document.getElementById("closeModel2").addEventListener("click", function(){
+    blackOut.style.display = "none";
+    modelBox.style.display = "none";
+    result.style.display = "none";
+    methodology.style.display = "none";
+})
+document.getElementById("method").addEventListener("click", function(){
+    blackOut.style.display = "block";
+    modelBox.style.display = "block";
+    result.style.display = "none";
+    methodology.style.display = "block";
 })
 
 function getProbability(constName, caste, party, category){
