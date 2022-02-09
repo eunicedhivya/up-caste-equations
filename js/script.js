@@ -68,8 +68,8 @@ function showResult(userResult, modelResult, constituency, caste, party){
     document.getElementById("chosenConst").innerHTML = constituency;
     document.getElementById("chosenParty").innerHTML = caste;
     document.getElementById("chosenCaste").innerHTML = party;
-    document.getElementById("userPrediction").innerHTML = userResult;
-    document.getElementById("modelPrediction").innerHTML = modelResult;
+    document.getElementById("userPrediction").innerHTML = userResult+"%";
+    document.getElementById("modelPrediction").innerHTML = modelResult+"%";
 }
 
 document.getElementById("closeModel").addEventListener("click", function(){
@@ -89,6 +89,15 @@ document.getElementById("method").addEventListener("click", function(){
     modelBox.style.display = "block";
     result.style.display = "none";
     methodology.style.display = "block";
+})
+document.getElementById("reset").addEventListener("click", function(){
+    document.getElementById("probable_range").value = 0;
+    document.getElementById("phase").selectedIndex = 0;
+    document.getElementById("constituency").selectedIndex = 0;
+    document.getElementById("candParty").selectedIndex = 0;
+    document.getElementById("candCaste").selectedIndex = 0;
+    document.getElementById("candCategory").selectedIndex = 0;
+    document.getElementById("caste_list").innerHTML = '<li>-</li><li>-</li><li>-</li>';
 })
 
 function getProbability(constName, caste, party, category){
@@ -258,6 +267,7 @@ function createDropdown(selector, data, type){
 
     var dOption = document.createElement("option")
         dOption.innerHTML = "Select "+type;
+        // dOption.value = "Select "+type;
     
     dropdownCont.appendChild(dOption);
 

@@ -5,11 +5,15 @@
   text-align: center;
   /* margin-top: 100px; */
 }
+.UPCasteEq_wrapper button {
+  cursor: pointer;
+}
 .UPCasteEq_wrapper select,
 .UPCasteEq_wrapper input {
   width: 100%;
   height: 29px;
   font-family: "Georama", sans-serif;
+  cursor: pointer;
 }
 .UPCasteEq_wrapper .row {
   margin-bottom: 10px;
@@ -196,7 +200,7 @@
 #chosenCaste {
   font-size: 13px;
   line-height: 15px;
-  display: inline-block;
+  display: block;
 }
 .result_body #userPrediction,
 .result_body #modelPrediction {
@@ -211,13 +215,13 @@
 }
 .result_body div b {
   font-size: 12px;
-  display: inline-block;
+  display: block;
   line-height: 14px;
   margin-bottom: 10px;
 }
 .result_header div b {
   font-size: 12px;
-  display: inline-block;
+  display: block;
   line-height: 14px;
   margin-bottom: 5px;
 }
@@ -226,4 +230,39 @@
   margin: 10px 0;
   padding-bottom: 10px;
   border-bottom: 1px solid #000;
+}
+
+#method {
+  background-color: #d3def8;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  padding: 3px 5px;
+  margin-top: 10px;
+}
+
+@media (min-width: 1024px) {
+  .UPCasteEq_wrapper {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .levl1,
+  .levl2 {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .UPCasteEq_model {
+    width: 30%;
+  }
+
+  .result_header,
+  .result_header .div,
+  .result_body {
+    column-gap: 20px;
+  }
+  .dominantcastetext {
+    padding: 25px;
+    box-sizing: border-box;
+  }
 }
