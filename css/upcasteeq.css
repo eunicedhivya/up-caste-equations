@@ -264,12 +264,11 @@
   font-weight: bold;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .UPCasteEq_wrapper {
     width: 100%;
     max-width: 600px;
   }
-
   .levl1,
   .levl2 {
     width: 60%;
