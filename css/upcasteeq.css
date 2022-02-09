@@ -1,9 +1,8 @@
 .UPCasteEq_wrapper {
   width: 100%;
   max-width: 300px;
-  margin: 50px auto;
+  margin: 30px auto;
   text-align: center;
-  /* margin-top: 100px; */
 }
 .UPCasteEq_wrapper button {
   cursor: pointer;
@@ -24,6 +23,7 @@
   font-size: 22px;
   margin-bottom: 15px;
   line-height: 26px;
+  color: #f6901e;
 }
 .UPCasteEq_desc {
   font-family: "Georama", sans-serif;
@@ -45,6 +45,7 @@
 
 .upcaste_dropdown {
   position: relative;
+  padding: 5px 5px;
 }
 
 .levl1 {
@@ -240,6 +241,23 @@
   font-size: 12px;
   padding: 3px 5px;
   margin-top: 10px;
+}
+
+/* .highlight {
+  color: #a05252;
+} */
+
+#phase,
+#constituency {
+  background-color: #d3def8;
+  color: #000;
+}
+
+#candParty,
+#candCaste,
+#candCategory {
+  background-color: #fae2bf;
+  color: #000;
 }
 
 @media (min-width: 1024px) {
