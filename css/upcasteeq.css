@@ -269,8 +269,9 @@
 #caste2017 {
   min-width: 20px;
   /* display: inline-block; */
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
   font-weight: bold;
+  background-color: #ebebeb;
 }
 
 @media (min-width: 960px) {
