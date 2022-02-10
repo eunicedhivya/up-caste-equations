@@ -3,6 +3,7 @@ var modelBox = document.getElementsByClassName("UPCasteEq_model")[0];
 var result = document.getElementById("result");
 var methodology = document.getElementById("methodology");
 
+var phaseName = document.getElementById("phase");
 var constName = document.getElementById("constituency");
 var candCasteName = document.getElementById("candCaste");
 var candPartyName = document.getElementById("candParty");
@@ -47,6 +48,12 @@ document.getElementById("submit").addEventListener("click", function(){
    var tempParty = document.getElementById("candParty").value;
    var tempRange = document.getElementById("probable_range").value;
 
+   if(tempPhase === "Select phase"){
+       phaseName.style.border = "2px solid red";
+       errorVal.push("phase")
+   }else{
+       phaseName.style.border = "none";
+   }
    if(tempConst === "Select constituency"){
        constName.style.border = "2px solid red";
        errorVal.push("constituency")
