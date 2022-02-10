@@ -3,6 +3,11 @@ var modelBox = document.getElementsByClassName("UPCasteEq_model")[0];
 var result = document.getElementById("result");
 var methodology = document.getElementById("methodology");
 
+var constName = document.getElementById("constituency");
+var candCasteName = document.getElementById("candCaste");
+var candPartyName = document.getElementById("candParty");
+var errors = document.getElementById("errors");
+
 document.getElementById("phase").addEventListener("change", function(){
     var phaseno = this.value;
     var fdData = rawData.filter(function(obj){
@@ -14,6 +19,7 @@ document.getElementById("phase").addEventListener("change", function(){
 
 document.getElementById("constituency").addEventListener("change", function(){
     var val = this.value;
+    
     var fdData = rawData.filter(function(obj){
         return obj['constituency'] === val;
     });
@@ -34,16 +40,42 @@ document.getElementById("constituency").addEventListener("change", function(){
 });
 
 document.getElementById("submit").addEventListener("click", function(){
+   var errorVal = [];
    var tempPhase = document.getElementById("phase").value;
    var tempConst = document.getElementById("constituency").value;
    var tempCaste = document.getElementById("candCaste").value;
    var tempParty = document.getElementById("candParty").value;
    var tempRange = document.getElementById("probable_range").value;
 
-   blackOut.style.display = "block";
-   modelBox.style.display = "block";
-   getProbability(tempConst, tempCaste, tempParty);
-   showResult(tempRange, getProbability(tempConst, tempCaste, tempParty), tempConst, tempCaste, tempParty,);
+   if(tempConst === "Select constituency"){
+       constName.style.border = "2px solid red";
+       errorVal.push("constituency")
+   }else{
+       constName.style.border = "none";
+   }
+   
+   if(tempCaste === "Select caste"){
+       candCasteName.style.border = "2px solid red";
+       errorVal.push("caste")
+   }else{
+       candCasteName.style.border = "none";
+   }
+
+   if(tempParty === "Select party"){
+       candPartyName.style.border = "2px solid red";
+       errorVal.push("party")
+   }else{
+       candPartyName.style.border = "none";
+   }
+
+   if((tempConst !== "Select constituency") && (tempCaste !== "Select caste") && (tempParty !== "Select party")){
+        showResult(tempRange, getProbability(tempConst, tempCaste, tempParty), tempConst, tempCaste, tempParty,);
+        errors.innerHTML = "";
+   }else{
+       var errorMsg = errorVal.join(", ") + " required"
+       console.log(errorMsg);
+       errors.innerHTML = errorMsg;
+   }
 })
 
 function showResult(userResult, modelResult, constituency, caste, party){

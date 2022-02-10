@@ -274,6 +274,12 @@
   background-color: #ebebeb;
 }
 
+#errors {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
 @media (min-width: 960px) {
   .UPCasteEq_wrapper {
     width: 100%;
