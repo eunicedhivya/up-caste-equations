@@ -264,6 +264,15 @@
   font-weight: bold;
 }
 
+#name2017,
+#won2017,
+#caste2017 {
+  min-width: 20px;
+  /* display: inline-block; */
+  border-bottom: 1px solid #000;
+  font-weight: bold;
+}
+
 @media (min-width: 960px) {
   .UPCasteEq_wrapper {
     width: 100%;

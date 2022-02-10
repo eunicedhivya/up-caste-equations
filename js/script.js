@@ -17,6 +17,10 @@ document.getElementById("constituency").addEventListener("change", function(){
     var fdData = rawData.filter(function(obj){
         return obj['constituency'] === val;
     });
+
+    document.getElementById("name2017").innerHTML = fdData[0]["winnerName(2017)"];
+    document.getElementById("won2017").innerHTML = fdData[0]["winningParty(2017)"];
+    document.getElementById("caste2017").innerHTML = fdData[0]["casteCandidate(2017)"];
     
     var casteData = [];
     casteData.push(fdData[0]['first']);
