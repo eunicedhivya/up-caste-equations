@@ -122,6 +122,9 @@ document.getElementById("reset").addEventListener("click", function(){
     document.getElementById("candParty").selectedIndex = 0;
     document.getElementById("candCaste").selectedIndex = 0;
     document.getElementById("caste_list").innerHTML = '<li>-</li><li>-</li><li>-</li>';
+    document.getElementById("name2017").innerHTML = "";
+    document.getElementById("won2017").innerHTML = "";
+    document.getElementById("caste2017").innerHTML = "";
 })
 
 function getProbability(constName, caste, party, category){
@@ -171,6 +174,7 @@ function getProbability(constName, caste, party, category){
 
     var output = (sumArr/8 * 100).toFixed(1);
 
+    console.log(parameters);
     console.log(output);
 
     return output;
