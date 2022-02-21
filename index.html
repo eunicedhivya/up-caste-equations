@@ -112,6 +112,32 @@
                 <input type="range" name="range" id="probable_range" min="0" max="100" value="0" />
                 <span>100%</span>
             </div>
+            <p>BJP | 57 seats in 2017</p>
+            <div class="UPCasteEq_range">
+                <span>0</span>
+                <div class="sliderWrap" id="bjp_Slider">
+                    <input type="range" name="range" class="range" id="bjp_range" min="0" max="100" value="0" />
+                    <div class="sliderSel" id="bjp_selector">
+                        <div class="slider"></div>
+                        <div class="value"></div>
+                    </div>
+                    <div class="progressBar"></div>
+                </div>
+                <span>100%</span>
+            </div>
+            <p>SP | 57 seats in 2017</p>
+            <div class="UPCasteEq_range">
+                <span>0</span>
+                <div class="sliderWrap" id="sp_Slider">
+                    <input type="range" name="range" class="range" id="sp_range" min="0" max="100" value="0" />
+                    <div class="sliderSel" id="sp_selector">
+                        <div class="slider"></div>
+                        <div class="value"></div>
+                    </div>
+                    <div class="progressBar"></div>
+                </div>
+                <span>100%</span>
+            </div>
         </div>
         <p id="errors"></p>
         <div class="UPCasteEq_buttons">
@@ -123,6 +149,7 @@
     </div>
     <script src="assets/rawdata.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         const slideValue = document.querySelector("#range_value");
         const inputSlider = document.querySelector("#probable_range");
@@ -135,6 +162,21 @@
         inputSlider.onblur = (() => {
             slideValue.classList.remove("show");
         });
+        
+        $(document).ready(function(){
+            function sliderFun(selector, color) {
+                var rang = $("#bjp_range").val();
+                $("#"+selector+"_selector .value").html(rang + "%");
+                $("#"+selector+"_range").on("input", function(){
+                    $("#"+selector+"_selector").css("left", this.value + "%");
+                    $("#"+selector+"_selector .slider").css("background", color);
+                    $("#"+selector+"_selector .value").html(this.value + "%");
+                    $("#"+selector+"_Slider .progressBar").css({"width": this.value + "%", "background": color});;
+                })
+            }
+            sliderFun("bjp", "#F47216")
+            sliderFun("sp", "#f00")
+        })
     </script>
 </body>
 </html>
