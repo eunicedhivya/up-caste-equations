@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/upcasteeq.css">
+    <link rel="stylesheet" href="css/model.css">
 </head>
 <body>
     <div id="error"></div>
@@ -32,7 +33,7 @@
                         <p>These results do not claim the absolute victory but the possibility of victory based on selected parameters.</p>
                         <p style="border-top: 1px solid #000; margin: 10px auto 0 auto;width: 80%;padding-top: 10px;"><b>Concept and data modelling:</b> Akash Gulankar, Partha Das, Varun Sharma | <b>Development:</b> Eunice Elizabeth Dhivya | <b>Design:</b> Prathap Ravishankar</p>
                     </div>
-                    <div id="result" style="display: none;">
+                    <!-- <div id="result" style="display: none;">
                         <p>Selected parameters</p>
                         <div class="result_header">
                             <div><b>Constituency</b> <span id="chosenConst"></span></div>
@@ -42,6 +43,76 @@
                         <div class="result_body">
                             <div><b>Your Prediction</b> <span id="userPrediction"></span></div>
                             <div><b>Result based on our model</b> <span id="modelPrediction"></span></div>
+                        </div>
+                        <button id="closeModel2">close</button>
+                    </div> -->
+                    <div id="result" style="display: none;">
+                        <p>Selected parameters</p>
+                        <p>Dummy text goes here. Dummy text goes here.</p>
+                        <p>Dummy text goes here. Dummy text goes here.</p>
+                        <p>Dummy text goes here. Dummy text goes here.</p>
+                        <p>Dummy text goes here. Dummy text goes here.</p>
+                        <div class="result_body">
+                            <div id="bjp">
+                                <h3>BJP</h3>
+                                <p class="precent">13%</p>
+                                <div class="seatsWrap">
+                                    <h1>169</h1>
+                                    <small>SEATS</small>
+                                </div>
+                                <div class="lost">
+                                    <p>-112</p>
+                                    <p>SEATS</p>
+                                </div>
+                            </div>
+                            <div id="sp">
+                                <h3>SP</h3>
+                                <p class="precent">13%</p>
+                                <div class="seatsWrap">
+                                    <h1>54</h1>
+                                    <small>SEATS</small>
+                                </div>
+                                <div class="won">
+                                    <p>+12</p>
+                                    <p>SEATS</p>
+                                </div>
+                            </div>
+                            <div id="bsp">
+                                <h3>BSP</h3>
+                                <p class="precent">13%</p>
+                                <div class="seatsWrap">
+                                    <h1>14</h1>
+                                    <small>SEATS</small>
+                                </div>
+                                <div class="won">
+                                    <p>+52</p>
+                                    <p>SEATS</p>
+                                </div>
+                            </div>
+                            <div id="congress">
+                                <h3>Congress</h3>
+                                <p class="precent">13%</p>
+                                <div class="seatsWrap">
+                                    <h1>20</h1>
+                                    <small>SEATS</small>
+                                </div>
+                                <div class="won">
+                                    <p>+2</p>
+                                    <p>SEATS</p>
+                                </div>
+                            </div>
+                            <div id="others">
+                                <h3>Others</h3>
+                                <p class="precent">13%</p>
+                                <div class="seatsWrap">
+                                    <h1>5</h1>
+                                    <small>SEATS</small>
+                                </div>
+                                <div class="lost">
+                                    <p>-6</p>
+                                    <p>SEATS</p>
+                                </div>
+                            </div>
                         </div>
                         <button id="closeModel2">close</button>
                     </div>
@@ -201,7 +272,7 @@
         inputSlider.onblur = (() => {
             slideValue.classList.remove("show");
         });
-        
+        // Slider function
         $(document).ready(function(){
             function sliderFun(selector, color) {
                 var rang = $("#bjp_range").val();
