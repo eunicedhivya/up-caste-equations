@@ -112,7 +112,7 @@
                 <input type="range" name="range" id="probable_range" min="0" max="100" value="0" />
                 <span>100%</span>
             </div>
-            <p>BJP | 57 seats in 2017</p>
+            <p id="bjp_header">BJP | 57 seats in 2017</p>
             <div class="UPCasteEq_range">
                 <span>0</span>
                 <div class="sliderWrap" id="bjp_Slider">
@@ -125,12 +125,51 @@
                 </div>
                 <span>100%</span>
             </div>
-            <p>SP | 57 seats in 2017</p>
+            <p id="sp_header">SP | 57 seats in 2017</p>
             <div class="UPCasteEq_range">
                 <span>0</span>
                 <div class="sliderWrap" id="sp_Slider">
                     <input type="range" name="range" class="range" id="sp_range" min="0" max="100" value="0" />
                     <div class="sliderSel" id="sp_selector">
+                        <div class="slider"></div>
+                        <div class="value"></div>
+                    </div>
+                    <div class="progressBar"></div>
+                </div>
+                <span>100%</span>
+            </div>
+            <p id="bsp_header">BSP | 57 seats in 2017</p>
+            <div class="UPCasteEq_range">
+                <span>0</span>
+                <div class="sliderWrap" id="bsp_Slider">
+                    <input type="range" name="range" class="range" id="bsp_range" min="0" max="100" value="0" />
+                    <div class="sliderSel" id="bsp_selector">
+                        <div class="slider"></div>
+                        <div class="value"></div>
+                    </div>
+                    <div class="progressBar"></div>
+                </div>
+                <span>100%</span>
+            </div>
+            <p id="congress_header">Congress | 57 seats in 2017</p>
+            <div class="UPCasteEq_range">
+                <span>0</span>
+                <div class="sliderWrap" id="congress_Slider">
+                    <input type="range" name="range" class="range" id="congress_range" min="0" max="100" value="0" />
+                    <div class="sliderSel" id="congress_selector">
+                        <div class="slider"></div>
+                        <div class="value"></div>
+                    </div>
+                    <div class="progressBar"></div>
+                </div>
+                <span>100%</span>
+            </div>
+            <p id="others_header">Others | 57 seats in 2017</p>
+            <div class="UPCasteEq_range">
+                <span>0</span>
+                <div class="sliderWrap" id="others_Slider">
+                    <input type="range" name="range" class="range" id="others_range" min="0" max="100" value="0" />
+                    <div class="sliderSel" id="others_selector">
                         <div class="slider"></div>
                         <div class="value"></div>
                     </div>
@@ -167,6 +206,7 @@
             function sliderFun(selector, color) {
                 var rang = $("#bjp_range").val();
                 $("#"+selector+"_selector .value").html(rang + "%");
+                $("#"+selector+"_header").css("color", color);
                 $("#"+selector+"_range").on("input", function(){
                     $("#"+selector+"_selector").css("left", this.value + "%");
                     $("#"+selector+"_selector .slider").css("background", color);
@@ -175,7 +215,10 @@
                 })
             }
             sliderFun("bjp", "#F47216")
-            sliderFun("sp", "#f00")
+            sliderFun("sp", "#ff0000")
+            sliderFun("bsp", "#36A9E1")
+            sliderFun("congress", "#3AAA35")
+            sliderFun("others", "#797979")
         })
     </script>
 </body>
